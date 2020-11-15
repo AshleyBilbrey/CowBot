@@ -1,0 +1,19 @@
+{
+  "name": "CowBot",
+  "version": "1.0.0",
+  "description": "A Discord bot for UC Davis campus info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3",
+    "discord.js": "^12.4.1",
+    "dotenv": "^8.2.0"
+  }
+}
