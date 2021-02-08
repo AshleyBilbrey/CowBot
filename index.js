@@ -24,7 +24,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     var msgarr = message.content.split(" ");
-    if(msgarr[0] != "!cow") {  return; }
+    if((msgarr[0] != "!cow") || (message.author.tag == client.user.tag)) {  return; }
     if(!client.commands.has(msgarr[1].toLowerCase())) {
         message.channel.send("Moo! That is not a valid command. You can see the list of commands with !cow help");
         return;
