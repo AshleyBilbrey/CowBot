@@ -76,6 +76,7 @@ module.exports = {
 
 
                 } else {
+                    db.close();
                     callback(result);
                 }
             });

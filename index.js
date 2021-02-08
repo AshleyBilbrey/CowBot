@@ -30,6 +30,7 @@ client.on('message', message => {
         return;
     }
     try {
+        console.log(message.author.tag + " ran commnad " + message.content);
         client.commands.get(msgarr[1].toLowerCase()).execute(message, msgarr);
     } catch (error) {
         console.error(error);
