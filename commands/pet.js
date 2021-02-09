@@ -3,7 +3,7 @@ module.exports = {
         description: "Reacts when someone pets the bot",
         execute(message) {
             const Discord = require('discord.js');
-            message.channel.send("moooooooooo\n");
+            message.channel.send("*moooooooooo*\n");
         }
     }
     
