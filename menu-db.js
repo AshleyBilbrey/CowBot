@@ -26,16 +26,40 @@ module.exports = {
                         $('div#tab' + dateNum + 'content > div:nth-of-type( 2 ) > li').each((i, element) => {
                             const food = $(element).children("span").text()
                             tercero_breakfast.push(food);
+                        }).then(() => {
+                            if(dateNum == 1) {
+                                tercero_breakfast.push("**Sunday breakfast is usually 9 a.m.–2 p.m.**");
+                            } else if(dateNum == 7) {
+                                tercero_breakfast.push("**Saturday breakfast is usually 9 a.m.–2 p.m.**");
+                            } else {
+                                tercero_breakfast.push("**Weekday breakfast is usually 7–11 a.m.**");
+                            }
                         });
 
                         $('div#tab' + dateNum + 'content > div:nth-of-type( 3 ) > li').each((i, element) => {
                             const food = $(element).children("span").text()
                             tercero_lunch.push(food);
+                        }).then(() => {
+                            if(dateNum == 1) {
+                                tercero_lunch.push("**Sunday lunch time usually serves breakfast.**");
+                            } else if(dateNum == 7) {
+                                tercero_lunch.push("**Saturday lunch time usually serves breakfast.**");
+                            } else {
+                                tercero_lunch.push("**Weekday lunch is usually 11 a.m.–2 p.m.**");
+                            }
                         });
 
                         $('div#tab' + dateNum + 'content > div:nth-of-type( 4 ) > li').each((i, element) => {
                             const food = $(element).children("span").text()
                             tercero_dinner.push(food);
+                        }).then(() => {
+                            if(dateNum == 1) {
+                                tercero_dinner.push("**Sunday dinner is usually 5–8 p.m.**");
+                            } else if(dateNum == 7) {
+                                tercero_dinner.push("**Saturday dinner is usually 5–7 p.m.**");
+                            } else {
+                                tercero_dinner.push("**Weekday dinner is usually 5–9 p.m.**");
+                            }
                         });
                     }).then(() => {
                         axios.get('https://housing.ucdavis.edu/dining/menus/dining-commons/segundo/').then(resp => {
@@ -43,16 +67,40 @@ module.exports = {
                             $('div#tab' + dateNum + 'content > div:nth-of-type( 2 ) > li').each((i, element) => {
                                 const food = $(element).children("span").text()
                                 segundo_breakfast.push(food);
+                            }).then(() => {
+                                if(dateNum == 1) {
+                                    segundo_breakfast.push("**Sunday breakfast is usually 9–11 a.m.**");
+                                } else if(dateNum == 7) {
+                                    segundo_breakfast.push("**Saturday breakfast is usually 9–11 a.m.**");
+                                } else {
+                                    segundo_breakfast.push("**Weekday breakfast is usually 7–11 a.m.**");
+                                }
                             });
 
                             $('div#tab' + dateNum + 'content > div:nth-of-type( 3 ) > li').each((i, element) => {
                                 const food = $(element).children("span").text()
                                 segundo_lunch.push(food);
+                            }).then(() => {
+                                if(dateNum == 1) {
+                                    segundo_lunch.push("**Sunday lunch is usually 11 a.m.–2 p.m.**");
+                                } else if(dateNum == 7) {
+                                    segundo_lunch.push("**Saturday lunch is usually 11 a.m.–2 p.m.**");
+                                } else {
+                                    segundo_lunch.push("**Weekday lunch is usually 11 a.m.–2 p.m.**");
+                                }
                             });
 
                             $('div#tab' + dateNum + 'content > div:nth-of-type( 4 ) > li').each((i, element) => {
                                 const food = $(element).children("span").text()
                                 segundo_dinner.push(food);
+                            }).then(() => {
+                                if(dateNum == 1) {
+                                    segundo_dinner.push("**Sunday dinner is usually 5–8 p.m.**");
+                                } else if(dateNum == 7) {
+                                    segundo_dinner.push("**Saturday dinner is usually 5–7 p.m.**");
+                                } else {
+                                    segundo_dinner.push("**Weekday dinner is usually 5–9 p.m.**");
+                                }
                             });
                         });
                     }).then(() => {
