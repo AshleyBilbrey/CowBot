@@ -20,6 +20,7 @@ for(const file of commandFiles) {
 client.on('ready', () => {
     console.log("CowBot Running.");
     console.log(`Logged in as ${client.user.tag}.`);
+    client.user.setPresence({ activity: { name: '🐄 !cow help' }, status: 'online' });
 });
 
 client.on('message', message => {
