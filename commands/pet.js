@@ -23,6 +23,9 @@ module.exports = {
                     } else {
                         oo = "*Big Moo~*";
                     }
+                    if(Math.floor(Math.random() * Math.floor(100)) == 0) {
+                        oo = "*oink~*";
+                    }
                     cowdb.isVip(message.author, (isVip) => {
                         if(isVip) {
                             oo += "  ❤️🐄";
@@ -30,7 +33,7 @@ module.exports = {
                         message.channel.send(oo);
                     })
 
-                    var rand = Math.floor(Math.random() * Math.floor(13));
+                    var rand = Math.floor(Math.random() * Math.floor(30));
                     if(rand == 0) {
                         message.channel.send("https://tenor.com/view/kissing-kiss-me-licking-sweet-affection-gif-15399371");
                     } else if(rand == 1) {
